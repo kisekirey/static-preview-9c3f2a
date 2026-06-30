@@ -620,3 +620,35 @@ strong { color: var(--accent); font-weight: 700; }
   #footer .footer-links.footer-center { columns: 1; max-width: 320px; }
   .access-map iframe { height: 280px; }
 }
+
+/* ============================================================================
+   コーポレートTOP・ナビ再編 追加スタイル（2026-06-30）
+   ========================================================================== */
+
+/* 読み物ドロップダウン（猫の予防/病気をグループ見出し付きで） */
+#gnav .submenu.submenu-read { min-width: 290px; }
+#gnav .submenu.submenu-read .rg-head { display: block; padding: 9px 16px 5px; font-family: var(--font-en);
+  font-weight: 700; color: var(--accent); font-size: .72rem; letter-spacing: .08em; }
+#gnav .submenu.submenu-read .rg-head:not(:first-child) { margin-top: 6px; border-top: 1px solid var(--base); padding-top: 13px; }
+
+/* 事業紹介・院案内カード（コーポレートTOP／臨床事業） */
+.biz-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 8px; }
+.biz-card { display: flex; flex-direction: column; background: #fff; border: 2px solid var(--base);
+  border-radius: 18px; padding: clamp(26px, 4vw, 40px); color: var(--text); }
+a.biz-card { transition: transform .25s, box-shadow .25s, border-color .25s; }
+a.biz-card:hover { opacity: 1; border-color: var(--pink); transform: translateY(-3px); box-shadow: var(--shadow); }
+.biz-card > .en { font-family: var(--font-en); font-weight: 700; color: var(--accent); font-size: 1.5rem;
+  letter-spacing: .06em; line-height: 1; }
+.biz-card h3 { font-size: 1.35rem; margin-top: 8px; }
+.biz-card p { margin-top: 14px; flex: 1 0 auto; font-size: .95rem; }
+.biz-card .more { margin-top: 20px; color: var(--accent); font-weight: 700; font-size: .92rem; }
+.badge-mini { align-self: flex-start; background: var(--accent); color: #fff; font-family: var(--font-en);
+  font-weight: 700; font-size: .8rem; padding: 4px 14px; border-radius: 999px; margin-bottom: 10px; letter-spacing: .03em; }
+
+/* コーポTOP：想い帯のリード・CTA中央寄せ */
+.home-lead { text-align: center; max-width: 780px; margin: 22px auto 0; }
+.center-cta { text-align: center; margin-top: 30px; }
+
+@media (max-width: 750px) {
+  .biz-grid { grid-template-columns: 1fr; gap: 18px; }
+}

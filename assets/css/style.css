@@ -652,3 +652,39 @@ a.biz-card:hover { opacity: 1; border-color: var(--pink); transform: translateY(
 @media (max-width: 750px) {
   .biz-grid { grid-template-columns: 1fr; gap: 18px; }
 }
+
+/* ============================================================================
+   修正対応 第2弾（2026-06-30）
+   ========================================================================== */
+
+/* キービジュアル：テキストはHTML、背景はブランド配色のグラデ＋装飾（非・病院的） */
+#hero.hero-key { position: relative; min-height: 540px; display: flex; align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+  background: radial-gradient(125% 120% at 50% -10%, #ffffff 0%, var(--base) 52%, var(--cream) 100%); }
+#hero.hero-key .deco { position: absolute; border-radius: 50%; pointer-events: none; }
+#hero.hero-key .deco1 { width: 210px; height: 210px; background: var(--pink); top: -46px; left: -52px; opacity: .32; }
+#hero.hero-key .deco2 { width: 132px; height: 132px; background: var(--coral); bottom: 34px; left: 7%; opacity: .38; }
+#hero.hero-key .deco3 { width: 92px; height: 92px; background: #c7b2ef; top: 17%; right: 11%; opacity: .42; }
+#hero.hero-key .deco4 { width: 260px; height: 260px; background: var(--accent); bottom: -96px; right: -64px; opacity: .16; }
+#hero.hero-key .deco5 { width: 60px; height: 60px; background: var(--pink); top: 22%; left: 14%; opacity: .35; }
+#hero.hero-key .hero-inner { position: relative; z-index: 2; padding: 48px 22px; max-width: 920px; }
+#hero.hero-key .hero-en { display: block; font-family: var(--font-en); font-weight: 700; color: var(--accent);
+  letter-spacing: .12em; font-size: clamp(12px, 1.5vw, 17px); }
+#hero.hero-key .hero-copy { font-family: var(--font-jp); font-weight: 700; color: var(--text);
+  font-size: clamp(27px, 4.4vw, 50px); line-height: 1.55; margin-top: 16px; letter-spacing: .04em; }
+#hero.hero-key .hero-sub { margin-top: 22px; color: var(--text); font-size: clamp(13px, 1.4vw, 16px); line-height: 1.95; }
+
+/* コラム冒頭の注記（一般情報である旨） */
+.column-note { background: var(--cream); border: 1px solid var(--line); border-radius: 12px;
+  padding: 14px 20px; margin-bottom: 30px; font-size: .86rem; color: var(--gray); line-height: 1.85; }
+
+/* 高輪院コンセプト（1カラム・写真なし） */
+.concept-list { display: grid; gap: 16px; margin-top: 10px; }
+.concept-item { background: var(--base); border-radius: 14px; border-left: 6px solid var(--accent); padding: 22px 26px; }
+.concept-item h3 { font-size: 1.15rem; color: var(--accent); margin-bottom: 8px; }
+
+@media (max-width: 750px) {
+  #hero.hero-key { min-height: 440px; }
+  #hero.hero-key .deco1 { width: 130px; height: 130px; }
+  #hero.hero-key .deco4 { width: 170px; height: 170px; }
+}

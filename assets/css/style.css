@@ -89,7 +89,7 @@ strong { color: var(--accent); font-weight: 700; }
 #header .inner { display: flex; align-items: flex-start; width: min(94%, 1480px); margin: 0 auto;
   min-height: 115px; padding-right: 104px; /* 右上ハンバーガーの逃げ */ }
 #header .logo { flex: 0 0 auto; align-self: flex-start; margin-right: auto; padding: 16px 0 0 0; line-height: 0; }
-#header .logo img { width: 178px; height: auto; }
+#header .logo img { width: 140px; height: auto; }
 #header .seo { display: none; } /* 元サイト同様、ヘッダーの説明文は非表示（SEO用にHTMLには残す） */
 #header #gnav { flex: 0 0 auto; margin-left: 1.6vw; margin-top: 34px; /* 上端の帯に合わせる */ }
 #header .header-tel { flex: 0 0 auto; margin-left: 1.2vw; margin-top: 36px; font-family: var(--font-en); font-weight: 700;

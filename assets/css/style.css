@@ -704,3 +704,9 @@ a.biz-card:hover { opacity: 1; border-color: var(--pink); transform: translateY(
   #hero .hero-overlay .ho-name { font-size: clamp(26px, 8vw, 42px); }
   #hero .hero-overlay .ho-copy { font-size: 14px; }
 }
+
+
+/* 署名バナー（トップページ上部のみ） */
+.hero-wrap { position: relative; }
+.sig-banner { display: block; line-height: 0; }
+.sig-banner img { display: block; width: 100%; height: auto; }

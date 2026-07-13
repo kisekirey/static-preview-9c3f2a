@@ -688,3 +688,19 @@ a.biz-card:hover { opacity: 1; border-color: var(--pink); transform: translateY(
   #hero.hero-key .deco1 { width: 130px; height: 130px; }
   #hero.hero-key .deco4 { width: 170px; height: 170px; }
 }
+
+
+/* ヒーロー：会社名オーバーレイ（写真右のクリーム地に配置・コーポレート感） */
+#hero { position: relative; }
+#hero .hero-overlay { position: absolute; left: 57.5%; top: 44%; width: 38%; max-width: 560px; z-index: 2; }
+#hero .hero-overlay .ho-corp { display: block; font-family: var(--font-jp); font-weight: 700; color: var(--text);
+  font-size: clamp(11px, 1.15vw, 17px); letter-spacing: .14em; }
+#hero .hero-overlay .ho-name { display: block; font-family: var(--font-jp); font-weight: 700; color: var(--accent);
+  font-size: clamp(22px, 3vw, 46px); line-height: 1.22; letter-spacing: .02em; margin-top: 3px; }
+#hero .hero-overlay .ho-copy { display: block; margin-top: 16px; font-family: var(--font-jp); font-weight: 600;
+  color: var(--text); font-size: clamp(11px, 1.2vw, 17px); line-height: 1.75; }
+@media (max-width: 750px) {
+  #hero .hero-overlay { left: 7%; top: auto; bottom: 6%; width: 86%; max-width: none; }
+  #hero .hero-overlay .ho-name { font-size: clamp(26px, 8vw, 42px); }
+  #hero .hero-overlay .ho-copy { font-size: 14px; }
+}

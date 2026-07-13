@@ -692,17 +692,18 @@ a.biz-card:hover { opacity: 1; border-color: var(--pink); transform: translateY(
 
 /* ヒーロー：会社名オーバーレイ（写真右のクリーム地に配置・コーポレート感） */
 #hero { position: relative; }
-#hero .hero-overlay { position: absolute; left: 57.5%; top: 44%; width: 38%; max-width: 560px; z-index: 2; }
-#hero .hero-overlay .ho-corp { display: block; font-family: var(--font-jp); font-weight: 700; color: var(--text);
-  font-size: clamp(11px, 1.15vw, 17px); letter-spacing: .14em; }
-#hero .hero-overlay .ho-name { display: block; font-family: var(--font-jp); font-weight: 700; color: var(--accent);
-  font-size: clamp(22px, 3vw, 46px); line-height: 1.22; letter-spacing: .02em; margin-top: 3px; }
-#hero .hero-overlay .ho-copy { display: block; margin-top: 16px; font-family: var(--font-jp); font-weight: 600;
-  color: var(--text); font-size: clamp(11px, 1.2vw, 17px); line-height: 1.75; }
+#hero .hero-overlay { position: absolute; left: 57%; top: 54%; width: 40%; max-width: 540px;
+  z-index: 2; padding-left: 24px; border-left: 3px solid var(--accent); }
+#hero .hero-overlay .ho-en { display: block; font-family: var(--font-en); font-weight: 700; color: var(--accent);
+  font-size: clamp(10px, .92vw, 14px); letter-spacing: .26em; text-transform: uppercase; margin-bottom: 13px; }
+#hero .hero-overlay .ho-name { display: block; font-family: var(--font-jp); font-weight: 700; color: var(--text);
+  font-size: clamp(20px, 2.5vw, 37px); line-height: 1.34; letter-spacing: .04em; }
+#hero .hero-overlay .ho-copy { display: block; margin-top: 18px; font-family: var(--font-jp); font-weight: 500;
+  color: var(--gray); font-size: clamp(11px, 1.05vw, 15px); line-height: 1.95; letter-spacing: .05em; }
 @media (max-width: 750px) {
-  #hero .hero-overlay { left: 7%; top: auto; bottom: 6%; width: 86%; max-width: none; }
-  #hero .hero-overlay .ho-name { font-size: clamp(26px, 8vw, 42px); }
-  #hero .hero-overlay .ho-copy { font-size: 14px; }
+  #hero .hero-overlay { left: 7%; right: 7%; top: auto; bottom: 7%; transform: none; width: auto; max-width: none; padding-left: 16px; }
+  #hero .hero-overlay .ho-name { font-size: clamp(24px, 7.5vw, 40px); }
+  #hero .hero-overlay .ho-copy { font-size: 13.5px; }
 }
 
 

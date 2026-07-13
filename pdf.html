@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>資料｜わたしのネコのクリニック</title>
+<link rel="icon" href="assets/img/favicon-32.png">
+<style>
+  html, body { margin: 0; height: 100%; background: #ececef; font-family: "Noto Sans JP", "Hiragino Sans", Meiryo, sans-serif; }
+  .pv-bar { display: flex; align-items: center; gap: 14px; height: 54px; padding: 0 18px; background: #fff; border-bottom: 1px solid #e5e5ea; }
+  .pv-bar .back { color: #c31456; font-weight: 700; text-decoration: none; font-size: .9rem; white-space: nowrap; flex: 0 0 auto; }
+  .pv-bar .back:hover { opacity: .75; }
+  .pv-bar .ttl { color: #222; font-size: .9rem; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .pv-bar .dl { margin-left: auto; color: #707780; font-size: .82rem; text-decoration: none; border: 1px solid #dadbe0; border-radius: 20px; padding: 6px 16px; white-space: nowrap; flex: 0 0 auto; }
+  .pv-bar .dl:hover { color: #c31456; border-color: #fc87b1; }
+  iframe { display: block; width: 100%; height: calc(100% - 54px); border: 0; background: #fff; }
+  .pv-fallback { padding: 40px 20px; text-align: center; color: #707780; }
+  .pv-fallback a { color: #c31456; font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="pv-bar">
+  <a class="back" href="index.html">← わたしのネコのクリニック</a>
+  <span class="ttl" id="t">資料</span>
+  <a class="dl" id="dl" href="#" download>ダウンロード</a>
+</div>
+<iframe id="f" title="資料"></iframe>
+<script>
+  var q = new URLSearchParams(location.search);
+  var src = q.get('src') || '';
+  var t = q.get('t') || '資料';
+  // 同一サイト内の press PDF のみ許可（安全対策）
+  if (/^assets\/press\/[A-Za-z0-9._-]+\.pdf$/.test(src)) {
+    document.getElementById('f').src = src + '#view=FitH';
+    document.getElementById('dl').href = src;
+  } else {
+    document.getElementById('f').outerHTML =
+      '<div class="pv-fallback">資料が見つかりませんでした。<br><a href="news.html">お知らせ一覧へ戻る</a></div>';
+  }
+  document.getElementById('t').textContent = t;
+  document.title = t + '｜わたしのネコのクリニック';
+</script>
+</body>
+</html>

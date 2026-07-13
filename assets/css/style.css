@@ -710,3 +710,9 @@ a.biz-card:hover { opacity: 1; border-color: var(--pink); transform: translateY(
 .hero-wrap { position: relative; }
 .sig-banner { display: block; line-height: 0; }
 .sig-banner img { display: block; width: 100%; height: auto; }
+
+/* オープン告知バナー（署名バナーの下・トップのみ） */
+.open-banner { background: var(--base); text-align: center; padding: clamp(24px, 4vw, 42px) 20px; }
+.open-banner .ob-main { font-family: var(--font-jp); font-weight: 700; color: var(--accent);
+  font-size: clamp(16px, 2.3vw, 26px); line-height: 1.5; letter-spacing: .02em; }
+.open-banner .ob-sub { margin-top: 10px; color: var(--text); font-size: clamp(12px, 1.15vw, 15px); line-height: 1.7; }
